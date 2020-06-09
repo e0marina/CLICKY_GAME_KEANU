@@ -82,15 +82,18 @@ class App extends Component {
             <span>High Score: {this.state.highScore}</span>
           </div>
         </ScoreCard>
-        {randomizekeanuPics(this.state.keanuPics).map((keanu) => (
-          <KeanuCard
-            clicked={this.handleClick}
-            id={keanu.id}
-            key={keanu.id}
-            name={keanu.name}
-            image={keanu.image}
-          />
-        ))}
+        <div id="container">
+          {randomizekeanuPics(this.state.keanuPics).map((keanu) => (
+            <KeanuCard
+              className="keanu-card"
+              clicked={this.handleClick}
+              id={keanu.id}
+              key={keanu.id}
+              name={keanu.name}
+              image={keanu.image}
+            />
+          ))}
+        </div>
       </Wrapper>
     );
   }
